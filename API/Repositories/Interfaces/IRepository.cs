@@ -2,7 +2,7 @@
 
 namespace API.Repositories.Interfaces {
     public interface IRepository<T> {
-        T Buscar();
+        T Buscar(int id);
         void Adicionar(T obj);
         void Deletar(T obj);
         void Editar(T obj);

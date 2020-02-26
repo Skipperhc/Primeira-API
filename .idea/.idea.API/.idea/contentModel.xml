@@ -1,23 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\Vitor Hainosz\.Rider2019.3\system\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\Vitor Hainosz\.Rider2019.3\system\resharper-host\local\Transient\ReSharperHost\v193\SolutionCaches\_API.-1373964407.00" t="ExcludeRecursive" />
-    <e p="E:\Progetos-Git\API" t="IncludeFlat">
+    <e p="C:\Users\VRHC\.Rider2019.3\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\VRHC\.Rider2019.3\system\resharper-host\local\Transient\ReSharperHost\v193\SolutionCaches\_API.1108987920.00" t="ExcludeRecursive" />
+    <e p="C:\Users\VRHC\source\repos\RiderProjects\Primeira-API" t="IncludeFlat">
       <e p="API" t="IncludeRecursive">
         <e p="API.csproj" t="IncludeRecursive" />
         <e p="appsettings.Development.json" t="Include" />
         <e p="appsettings.json" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
         <e p="Controllers" t="Include">
+          <e p="CategoryController.cs" t="Include" />
           <e p="WeatherForecastController.cs" t="Include" />
         </e>
         <e p="Data" t="Include">
           <e p="ApplicationDbContext.cs" t="Include" />
         </e>
         <e p="Migrations" t="Include">
-          <e p="20200224195936_AddInitial.cs" t="Include" />
-          <e p="20200224195936_AddInitial.Designer.cs" t="Include" />
+          <e p="20200226133649_Initial.cs" t="Include" />
+          <e p="20200226133649_Initial.Designer.cs" t="Include" />
           <e p="ApplicationDbContextModelSnapshot.cs" t="Include" />
         </e>
         <e p="Models" t="Include">
