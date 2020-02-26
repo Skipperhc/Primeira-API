@@ -42,7 +42,7 @@ namespace API.Repositories {
         }
 
         public List<Product> GetListar(int id) {
-            return _dbContext.Products.AsNoTracking().Where(x => x.CategoryId == id).ToList();
+            return _dbContext.Products.AsNoTracking().Include(x => x.Category).Where(x => x.CategoryId == id).ToList();
         }
     }
 }

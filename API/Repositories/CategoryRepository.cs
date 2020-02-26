@@ -19,7 +19,7 @@ namespace API.Repositories {
         }
         
         public Category GetBuscar(int id) {
-            return _dbContext.Categories.AsNoTracking().Where(x => x.Id == id).FirstOrDefault();
+            return _dbContext.Categories.AsNoTracking().FirstOrDefault(x => x.Id == id);
         }
 
         public void Adicionar(Category obj) {
@@ -34,6 +34,11 @@ namespace API.Repositories {
 
         public void Editar(Category obj){
             _dbContext.Entry(obj).State = EntityState.Modified;
+            _dbContext.SaveChanges();
+        }
+
+        public void GetEditar(Category category) {
+            _dbContext.Entry(category).State = EntityState.Modified;
             _dbContext.SaveChanges();
         }
 

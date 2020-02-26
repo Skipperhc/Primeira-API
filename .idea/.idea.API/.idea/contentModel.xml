@@ -11,14 +11,14 @@
         <e p="bin" t="ExcludeRecursive" />
         <e p="Controllers" t="Include">
           <e p="CategoryController.cs" t="Include" />
-          <e p="WeatherForecastController.cs" t="Include" />
+          <e p="ProductController.cs" t="Include" />
         </e>
         <e p="Data" t="Include">
           <e p="ApplicationDbContext.cs" t="Include" />
         </e>
         <e p="Migrations" t="Include">
-          <e p="20200226133649_Initial.cs" t="Include" />
-          <e p="20200226133649_Initial.Designer.cs" t="Include" />
+          <e p="20200226160022_initial.cs" t="Include" />
+          <e p="20200226160022_initial.Designer.cs" t="Include" />
           <e p="ApplicationDbContextModelSnapshot.cs" t="Include" />
         </e>
         <e p="Models" t="Include">
@@ -47,7 +47,13 @@
           <e p="ProductRepository.cs" t="Include" />
         </e>
         <e p="Startup.cs" t="Include" />
-        <e p="WeatherForecast.cs" t="Include" />
+        <e p="ViewModels" t="Include">
+          <e p="ProductViewModels" t="Include">
+            <e p="EditorProductViewModels.cs" t="Include" />
+            <e p="ListProductViewModels.cs" t="Include" />
+          </e>
+          <e p="ResultViewModel.cs" t="Include" />
+        </e>
       </e>
       <e p="API.sln" t="IncludeFlat" />
       <e p="packages" t="ExcludeRecursive" />

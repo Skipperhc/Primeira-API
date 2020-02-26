@@ -1,15 +1,19 @@
 ﻿using System.Collections.Generic;
+using System.Net.Mime;
+using API.Data;
 using API.Models;
 using API.Repositories;
+using API.Repositories.Interfaces;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace API.Controllers {
     public class CategoryController : Controller {
 
-        private readonly CategoryRepository _categoryRepository;
-        private readonly ProductRepository _productRepository;
+        private readonly ICategoryRepository _categoryRepository;
+        private readonly IProductRepository _productRepository;
 
-        public CategoryController(CategoryRepository dbContext, ProductRepository productRepository) {
+        public CategoryController(ICategoryRepository dbContext, IProductRepository productRepository) {
             _categoryRepository = dbContext;
             _productRepository = productRepository;
         }
@@ -25,8 +29,7 @@ namespace API.Controllers {
         }
 
         //mandando uma lista de produtos
-        [Route("v1/categories/{id}/products")] [HttpGet]
-        public List<Product> GetListaProducts(int id) {
+        [Route("v1/categories/{id}/products")] [HttpGet] public List<Product> GetListaProducts(int id) {
             return _productRepository.GetListar(id);
         }
 
@@ -38,14 +41,21 @@ namespace API.Controllers {
 
         [Route("v1/categories")] [HttpPut] public Category PutCategory([FromBody] Category category) {
             _categoryRepository.Editar(category);
-            
+
             return category;
         }
 
-        [Route("v1/categories")] [HttpDelete] public Category DeleteCategory([FromBody] Category category) {
+        [Route("v1/categories/{id}")] [HttpDelete] public Category DeleteCategory(int id) {
+            var category = _categoryRepository.GetBuscar(id);
             _categoryRepository.Deletar(category);
 
             return category;
+        }
+
+        [Route("v1/products")] [HttpPost] public Product PostProduct([FromBody] Product product) {
+            _productRepository.Adicionar(product);
+
+            return product;
         }
     }
 }
